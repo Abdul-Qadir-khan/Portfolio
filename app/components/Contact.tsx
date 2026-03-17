@@ -1,11 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6">
-
+    <section
+      id="contact"
+      className="py-32 px-6 bg-gradient-to-b from-[#020617] to-[#0f172a]"
+    >
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Title */}
@@ -14,45 +17,55 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-white"
+          className="text-4xl md:text-5xl font-bold text-white"
         >
-          Let's Work Together
+          Let's Work Together 🚀
         </motion.h2>
 
-        <p className="text-gray-400 mt-4">
+        <p className="text-gray-400 mt-4 text-lg">
           I'm currently open to remote frontend developer roles and freelance opportunities.
         </p>
 
-        {/* Contact Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-10">
+        {/* Buttons */}
+        <div className="flex flex-wrap justify-center gap-6 mt-12">
 
-          <a
+          {/* Email */}
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="mailto:your-email@example.com"
-            className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg text-sm font-medium transition"
+            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-3 rounded-lg font-medium shadow-lg shadow-indigo-600/30 transition"
           >
+            <Mail size={18} />
             Email Me
-          </a>
+          </motion.a>
 
-          <a
+          {/* Github */}
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="https://github.com/yourusername"
             target="_blank"
-            className="border border-slate-600 px-6 py-3 rounded-lg text-sm hover:bg-white/5 transition"
+            className="flex items-center gap-2 border border-slate-600 text-gray-200 px-7 py-3 rounded-lg hover:bg-slate-800 transition"
           >
+            <Github size={18} />
             GitHub
-          </a>
+          </motion.a>
 
-          <a
+          {/* LinkedIn */}
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="https://linkedin.com/in/yourusername"
             target="_blank"
-            className="border border-slate-600 px-6 py-3 rounded-lg text-sm hover:bg-white/5 transition"
+            className="flex items-center gap-2 border border-slate-600 text-gray-200 px-7 py-3 rounded-lg hover:bg-slate-800 transition"
           >
+            <Linkedin size={18} />
             LinkedIn
-          </a>
+          </motion.a>
 
         </div>
-
       </div>
-
     </section>
   )
 }

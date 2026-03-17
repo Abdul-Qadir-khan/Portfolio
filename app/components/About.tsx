@@ -30,19 +30,19 @@ export default function About() {
             About Me
           </h2>
 
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-xl text-gray-400 leading-relaxed">
             I'm a frontend developer with 3+ years of experience
             building modern, responsive web applications using
             React, Next.js, and modern JavaScript tools.
           </p>
 
-          <p className="text-gray-400 mt-4 leading-relaxed">
+          <p className="text-xl text-gray-400 mt-4 leading-relaxed">
             I focus on performance, accessibility, and building
             scalable UI architectures for production-ready
             applications.
           </p>
 
-          <p className="text-gray-400 mt-4 leading-relaxed">
+          <p className="text-xl text-gray-400 mt-4 leading-relaxed">
             My goal is to create fast, accessible, and visually
             engaging experiences for users while maintaining
             clean and maintainable code.
