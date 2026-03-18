@@ -7,22 +7,22 @@ const services = [
   {
     title: "Web Development",
     description:
-      "Creating responsive, modern websites with a focus on performance and accessibility.",
-    icon: <FaLaptopCode size={36} className="text-white" />,
+      "Building fast, scalable, and responsive web applications using modern technologies.",
+    icon: <FaLaptopCode size={28} className="text-white" />,
     gradient: "from-indigo-500 to-purple-500",
   },
   {
     title: "UI/UX Design",
     description:
-      "Designing engaging user experiences with elegant, intuitive interfaces.",
-    icon: <FaPalette size={36} className="text-white" />,
+      "Designing clean, intuitive interfaces focused on usability and user experience.",
+    icon: <FaPalette size={28} className="text-white" />,
     gradient: "from-pink-500 to-red-500",
   },
   {
-    title: "SEO Optimization",
+    title: "Performance & SEO",
     description:
-      "Boosting website visibility and driving organic traffic effectively.",
-    icon: <FaRocket size={36} className="text-white" />,
+      "Optimizing applications for speed, accessibility, and better search rankings.",
+    icon: <FaRocket size={28} className="text-white" />,
     gradient: "from-green-400 to-teal-400",
   },
 ]
@@ -31,30 +31,35 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-32 px-6 bg-gradient-to-b from-[#0a0f2e] to-[#020617] overflow-hidden"
+      className="relative py-32 px-6 bg-[#020617] overflow-hidden"
     >
-      {/* Floating shapes for depth */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-indigo-600/20 rounded-full blur-3xl animate-blob" />
-      <div className="absolute bottom-20 right-10 w-56 h-56 bg-pink-500/20 rounded-full blur-2xl animate-blob animation-delay-2000" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      {/* 🌌 Subtle background glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute w-[400px] h-[400px] bg-indigo-500/10 blur-[120px] top-0 left-0 rounded-full" />
+        <div className="absolute w-[400px] h-[400px] bg-purple-500/10 blur-[120px] bottom-0 right-0 rounded-full" />
+      </div>
 
-        {/* Section Title */}
+      <div className="max-w-6xl mx-auto">
+
+        {/* Title */}
         <div className="mb-20 text-center">
-          <h2 className="text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
             My Expertise
           </h2>
-          <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            Combining design, development, and strategy to create high-impact digital experiences.
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+            I design and build modern digital products with a focus on performance,
+            scalability, and user experience.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
+
       </div>
     </section>
   )
